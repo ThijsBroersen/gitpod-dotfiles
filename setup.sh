@@ -18,4 +18,5 @@ chmod +x cs
 ./cs setup --install-dir /workspace/coursier-apps
 rm cs
 
+eval "$(cs setup --jvm zulu:17 --jvm-dir /workspace/jvm)"
 cs install bloop:1.4.12 --only-prebuilt=true --install-dir /workspace/coursier-apps
