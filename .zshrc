@@ -103,8 +103,4 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export PATH="$PATH:/workspace/coursier-apps"
-
-export SBT_OPTS="-Dsbt.global.base=/workspace/cache/sbt/.sbtboot -Dsbt.boot.directory=/workspace/cache/sbt/boot -Dsbt.ivy.home=/workspace/cache/sbt/.ivy -Dsbt.coursier.home=/workspace/cache/sbt/.coursier"
-
-export COURSIER_CACHE="/workspace/cache/coursier"
+source ~/.gitpodenv
