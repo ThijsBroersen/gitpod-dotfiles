@@ -17,6 +17,6 @@ source .gitpodenv.sh
 
 curl -fL https://github.com/coursier/launchers/raw/master/cs-x86_64-pc-linux.gz | gzip -d > cs
 chmod +x cs
-eval "$(./cs setup --install-dir /workspace/coursier-apps --jvm zulu:17 --jvm-dir /workspace/jvm)"
+eval "$(./cs setup --yes --install-dir /workspace/coursier-apps --jvm zulu:17)"
 rm cs
 cs install bloop:1.4.12 --only-prebuilt=true --install-dir /workspace/coursier-apps
