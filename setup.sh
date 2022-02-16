@@ -10,6 +10,7 @@ rm ~/.p10k.zsh || true
 
 cp ~/.dotfiles/.zshrc ~/
 cp ~/.dotfiles/.p10k.zsh ~/
+cp ~/.dotfiles/.gitpodenv.sh ~/
 
 sudo usermod --shell $(which zsh) gitpod
 
