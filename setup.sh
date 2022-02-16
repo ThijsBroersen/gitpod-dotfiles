@@ -15,8 +15,6 @@ sudo usermod --shell $(which zsh) gitpod
 
 curl -fL https://github.com/coursier/launchers/raw/master/cs-x86_64-pc-linux.gz | gzip -d > cs
 chmod +x cs
-./cs setup --install-dir /workspace/coursier-apps
+eval "$(./cs setup --install-dir /workspace/coursier-apps --jvm zulu:17 --jvm-dir /workspace/jvm)"
 rm cs
-
-eval "$(cs setup --jvm zulu:17 --jvm-dir /workspace/jvm)"
 cs install bloop:1.4.12 --only-prebuilt=true --install-dir /workspace/coursier-apps
