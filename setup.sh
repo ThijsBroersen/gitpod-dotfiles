@@ -13,6 +13,8 @@ cp ~/.dotfiles/.p10k.zsh ~/
 
 sudo usermod --shell $(which zsh) gitpod
 
+source .gitpodenv.sh
+
 curl -fL https://github.com/coursier/launchers/raw/master/cs-x86_64-pc-linux.gz | gzip -d > cs
 chmod +x cs
 eval "$(./cs setup --install-dir /workspace/coursier-apps --jvm zulu:17 --jvm-dir /workspace/jvm)"
