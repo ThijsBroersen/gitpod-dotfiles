@@ -12,3 +12,5 @@ cp ~/.dotfiles/.zshrc ~/
 cp ~/.dotfiles/.p10k.zsh ~/
 
 sudo usermod --shell $(which zsh) gitpod
+
+eval "$(cs setup --apps sbt-launcher,ammonite,cs,coursier,sbt,sbtn,bloop,scalafmt,scala,scalac --install-dir /workspace/coursier-apps)"
