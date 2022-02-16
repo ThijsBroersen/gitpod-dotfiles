@@ -104,3 +104,7 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export PATH="$PATH:/home/gitpod/.local/share/coursier/bin"
+
+export SBT_OPTS="-Dsbt.global.base=/workspace/cache/sbt/.sbtboot -Dsbt.boot.directory=/workspace/cache/sbt/boot -Dsbt.ivy.home=/workspace/cache/sbt/.ivy -Dsbt.coursier.home=/workspace/cache/sbt/.coursier"
+
+export COURSIER_CACHE="/workspace/cache/coursier"
