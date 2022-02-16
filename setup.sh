@@ -5,12 +5,17 @@ zsh -c "git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_C
 zsh -c "git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions"
 sudo apt install fonts-powerline -y
     
-rm ~/.zshrc
-rm ~/.p10k.zsh
+rm ~/.zshrc || true
+rm ~/.p10k.zsh || true
 
 cp ~/.dotfiles/.zshrc ~/
 cp ~/.dotfiles/.p10k.zsh ~/
 
 sudo usermod --shell $(which zsh) gitpod
 
-eval "$(cs setup --apps sbt-launcher,ammonite,cs,coursier,sbt,sbtn,bloop,scalafmt,scala,scalac --install-dir /workspace/coursier-apps)"
+curl -fL https://github.com/coursier/launchers/raw/master/cs-x86_64-pc-linux.gz | gzip -d > cs
+chmod +x cs
+./cs setup --install-dir /workspace/coursier-apps
+rm cs
+
+cs install bloop:1.4.12 --only-prebuilt=true --install-dir /workspace/coursier-apps
