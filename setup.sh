@@ -21,3 +21,6 @@ chmod +x cs
 eval "$(./cs setup --yes --install-dir /workspace/coursier-apps --jvm zulu:17)"
 rm cs
 cs install bloop --only-prebuilt=true --install-dir /workspace/coursier-apps
+
+mkdir -p ~/.bloop
+echo '{"javaOptions": ["-Xms1G","-Xmx8G","-Xss64m","-XX:ReservedCodeCacheSize=256M","-XX:MaxInlineLevel=20","-XX:+UseParallelGC","-Dfile.encoding=UTF-8"]}' > ~/.bloop/bloop.json
