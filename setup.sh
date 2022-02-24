@@ -20,4 +20,4 @@ curl -fL https://github.com/coursier/launchers/raw/master/cs-x86_64-pc-linux.gz 
 chmod +x cs
 eval "$(./cs setup --yes --install-dir /workspace/coursier-apps --jvm zulu:17)"
 rm cs
-cs install bloop:1.4.12 --only-prebuilt=true --install-dir /workspace/coursier-apps
+cs install bloop --only-prebuilt=true --install-dir /workspace/coursier-apps
