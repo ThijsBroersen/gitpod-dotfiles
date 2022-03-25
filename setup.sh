@@ -18,7 +18,7 @@ source .gitpodenv.sh
 
 curl -fL https://github.com/coursier/launchers/raw/master/cs-x86_64-pc-linux.gz | gzip -d > cs
 chmod +x cs
-eval "$(./cs setup --yes --jvm zulu:17 --env)"
+eval "$(./cs setup --yes --env --jvm zulu:17)"
 rm cs
 cs install metals
 cs install bloop --only-prebuilt=true
