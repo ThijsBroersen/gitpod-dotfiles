@@ -18,10 +18,10 @@ source .gitpodenv.sh
 
 curl -fL https://github.com/coursier/launchers/raw/master/cs-x86_64-pc-linux.gz | gzip -d > cs
 chmod +x cs
-eval "$(./cs setup --yes --install-dir /workspace/coursier-apps --jvm zulu:17)"
+eval "$(./cs setup --yes --jvm zulu:17 --env)"
 rm cs
-cs install metals --install-dir /workspace/coursier-apps
-cs install bloop --only-prebuilt=true --install-dir /workspace/coursier-apps
+cs install metals
+cs install bloop --only-prebuilt=true
 
 mkdir -p ~/.bloop
 echo '{"javaOptions": ["-Xms1G","-Xmx8G","-Xss64m","-XX:ReservedCodeCacheSize=256M","-XX:MaxInlineLevel=20","-XX:+UseParallelGC","-Dfile.encoding=UTF-8"]}' > ~/.bloop/bloop.json
