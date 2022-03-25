@@ -7,3 +7,5 @@ export COURSIER_INSTALL_DIR="/workspace/coursier-apps"
 export COURSIER_CACHE="/workspace/cache/coursier"
 
 export COURSIER_JVM_CACHE="/workspace/cache/coursier/jvm"
+
+export SDKMAN_DIR="/workspace/sdkman"
