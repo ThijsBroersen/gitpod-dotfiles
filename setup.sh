@@ -21,6 +21,8 @@ curl -s "https://get.sdkman.io" | bash
 echo -e "source /workspace/sdkman/bin/sdkman-init.sh\n" >> ~/.bashrc
 echo -e "source /workspace/sdkman/bin/sdkman-init.sh\n" >> ~/.zshrc
 
+source /workspace/sdkman/bin/sdkman-init.sh
+
 sdk install java 22.0.0.2.r17-grl
 
 curl -fL https://github.com/coursier/launchers/raw/master/cs-x86_64-pc-linux.gz | gzip -d > cs
