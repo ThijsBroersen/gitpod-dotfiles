@@ -17,8 +17,7 @@ sudo usermod --shell $(which zsh) gitpod
 
 source .gitpodenv.sh
 
-curl -s "https://get.sdkman.io" | bash
-echo -e "source /workspace/sdkman/bin/sdkman-init.sh\n" >> ~/.bashrc
-echo -e "source /workspace/sdkman/bin/sdkman-init.sh\n" >> ~/.zshrc
+echo -e "source /home/gitpod/.sdkman/bin/sdkman-init.sh\n" >> ~/.bashrc
+echo -e "source /home/gitpod/.sdkman/bin/sdkman-init.sh\n" >> ~/.zshrc
 
 source /workspace/sdkman/bin/sdkman-init.sh
