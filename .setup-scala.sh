@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-sdk install java 22.0.0.2.r17-grl
+sdk install java 22.1.0.r17-grl
 
 curl -fL https://github.com/coursier/launchers/raw/master/cs-x86_64-pc-linux.gz | gzip -d > cs
 chmod +x cs
