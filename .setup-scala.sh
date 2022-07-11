@@ -9,4 +9,4 @@ chmod +x cs
 ./cs install bloop --only-prebuilt=true
 rm cs
 
-echo -e 'export PATH="$PATH:/home/gitpod/.local/share/coursier/bin"\n' >> ~/.zprofile
+echo 'export PATH="$PATH:/home/gitpod/.local/share/coursier/bin"\n' >> ~/.zprofile
