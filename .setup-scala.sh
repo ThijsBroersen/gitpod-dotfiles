@@ -6,9 +6,7 @@ echo '{"javaOptions": ["-Xms1G","-Xmx8G","-Xss64m","-XX:ReservedCodeCacheSize=25
 curl -fL https://github.com/coursier/launchers/raw/master/cs-x86_64-pc-linux.gz | gzip -d > cs
 chmod +x cs
 ./cs setup --yes
-cs install bloop --only-prebuilt=true
+./cs install bloop --only-prebuilt=true
 rm cs
 
-# >>> coursier install directory >>>
-export PATH="$PATH:/home/gitpod/.local/share/coursier/bin"
-# <<< coursier install directory <<<
+echo -e 'export PATH="$PATH:/home/gitpod/.local/share/coursier/bin"\n' >> ~/.zprofile
