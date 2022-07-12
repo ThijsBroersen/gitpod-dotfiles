@@ -12,6 +12,7 @@ cp ~/.dotfiles/.zshrc ~/
 cp ~/.dotfiles/.p10k.zsh ~/
 cp ~/.dotfiles/.gitpodenv.sh ~/
 echo -e "source ~/.gitpodenv.sh\n" >> ~/.bashrc
+echo -e "source ~/.gitpodenv.sh\n" >> ~/.zshrc
 
 sudo usermod --shell $(which zsh) gitpod
 
