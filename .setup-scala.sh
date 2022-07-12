@@ -10,3 +10,6 @@ chmod +x cs
 rm cs
 
 echo 'export PATH="$PATH:/home/gitpod/.local/share/coursier/bin"\n' >> ~/.zprofile
+mkdir -p ~/.sbt/1.0/plugins
+touch ~/.sbt/1.0/plugins/plugins.sbt
+echo 'addDependencyTreePlugin\n' >> ~/.sbt/1.0/plugins/plugins.sbt
